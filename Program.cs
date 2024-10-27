@@ -90,15 +90,13 @@ class Program
         {
             return "RESERVADA";
         }
-        if (DireccionIp.StartsWith("10.") ||
+
+       else  if (DireccionIp.StartsWith("10.") ||
             DireccionIp.StartsWith("192.168.") ||
-            (clase.Equals("B") && segundoOcteto >= 16 || segundoOcteto <=31))
+            (DireccionIp.StartsWith("172.") && segundoOcteto >= 16 && segundoOcteto <=31))
         {
             return "PRIVADA";
-        }
-
-
-      
+        }else    
 
       
         return "PUBLICA";
